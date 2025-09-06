@@ -152,4 +152,3 @@ This media query will restore the original, larger sizes and spacing for screens
     bottom: -25px; /* Reverts to original position */
     font-size: 0.8rem;
   }
-}
