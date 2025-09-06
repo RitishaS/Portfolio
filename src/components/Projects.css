@@ -1,0 +1,188 @@
+/* --- SECTION STYLING --- */
+.projects-section {
+  padding: 4rem 0;
+  text-align: center;
+  background: #050505;
+}
+
+.projects-heading {
+  font-size: 3rem;
+  margin-bottom: 2rem;
+  font-weight: bold;
+  background: linear-gradient(to right, #0ff, #9f7aea);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* --- CAROUSEL SLIDER STYLING --- */
+.projects-carousel {
+  width: 100%;
+  padding-top: 20px;
+  padding-bottom: 50px;
+  position: relative; /* Important for arrow positioning */
+}
+
+.projects-carousel .swiper-slide {
+  width: 65%;
+  max-width: 450px;
+  transition: transform 0.4s ease-in-out, opacity 0.4s ease-in-out;
+  transform: scale(0.85);
+  opacity: 0.7;
+}
+
+.projects-carousel .swiper-slide-active {
+  transform: scale(1);
+  opacity: 1;
+}
+
+/* --- PROJECT CARD STYLING --- */
+.project-card {
+  background: #0f0f0f;
+  border-radius: 1.2rem;
+  overflow: hidden;
+  text-align: left;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid rgba(0, 255, 255, 0.2); /* Fix for dark theme */
+}
+
+.project-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 25px rgba(0, 255, 255, 0.2);
+}
+
+/* --- CARD CONTENT STYLING --- */
+.project-image {
+  height: 220px;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.status, .category {
+  position: absolute;
+  top: 15px;
+  padding: 0.3rem 0.8rem;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: #fff;
+}
+
+.status {
+  left: 15px;
+  background: linear-gradient(90deg, #ff6a00, #ee0979);
+}
+
+.category {
+  right: 15px;
+  background: #006daa;
+}
+
+.project-content {
+  padding: 1.5rem;
+}
+
+.project-content h3 {
+  font-size: 1.5rem;
+  color: #0ff;
+  margin-bottom: 0.5rem;
+}
+
+.project-content p {
+  font-size: 1rem;
+  color: #bbb;
+  margin-bottom: 1rem;
+  min-height: 70px; /* Optional: to keep card heights consistent */
+}
+
+.tags {
+  margin-bottom: 1.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.tag {
+  background: rgba(0, 255, 255, 0.1);
+  color: #0ff;
+  padding: 0.4rem 0.8rem;
+  border-radius: 6px;
+  font-size: 0.85rem;
+}
+
+.buttons {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.btn {
+  background: #9f7aea;
+  color: #fff;
+  padding: 0.6rem 1.2rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background: #6b21a8;
+}
+
+.btn-outline {
+  background: transparent;
+  border: 2px solid #0ff;
+  color: #0ff;
+}
+
+.btn-outline:hover {
+  background: #0ff;
+  color: #050505;
+}
+
+/* --- NAVIGATION & PAGINATION STYLING --- */
+.swiper-button-next,
+.swiper-button-prev {
+  background-color: rgba(0, 255, 255, 0.1);
+  color: #0ff !important;
+  border: 1px solid rgba(0, 255, 255, 0.3);
+  width: 44px !important;
+  height: 44px !important;
+  border-radius: 50%;
+  transition: background-color 0.3s ease;
+}
+
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+  background-color: rgba(0, 255, 255, 0.3);
+}
+
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  font-size: 18px !important;
+  font-weight: bold;
+}
+
+.swiper-pagination-bullet {
+  background: #9f7aea;
+  opacity: 0.6;
+}
+
+.swiper-pagination-bullet-active {
+  background: #0ff;
+  opacity: 1;
+}
+
+/* --- RESPONSIVE --- */
+@media (max-width: 768px) {
+  .projects-carousel .swiper-slide {
+    width: 85%;
+  }
+
+  .swiper-button-next,
+  .swiper-button-prev {
+    display: none; /* Hide arrows on mobile */
+  }
+}
+

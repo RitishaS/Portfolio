@@ -1,0 +1,74 @@
+.profile-wrapper {
+  position: relative;
+  width: 500px;
+  height: 500px;
+  
+}
+
+
+/* 🔵 Gradient ring behind everything */
+.gradient-ring {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;  /* 👈 bigger than image */
+  height: 400px;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  background: conic-gradient(from 0deg, #6a00f4, #00d4ff, #6a00f4);
+  z-index: 0;
+  filter: blur(2px);  /* Slightly stronger blur */
+}
+
+
+/* Profile image (centered inside) */
+.profile-img {
+  width: 350px; /* slightly smaller */
+  height: 350px;
+  border-radius: 50%;
+  
+  object-fit: cover;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+}
+
+
+/* 🌀 Rotating text circle */
+.circle-svg {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  animation: spin 18s linear infinite;
+}
+
+
+
+/* 🖼️ Profile image */
+.profile-img {
+  width: 350px;
+  height: 350px;
+  border-radius: 50%;
+  border: 4px solid #ffffff; 
+  object-fit: cover;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+}
+
+/* 🔄 Rotate animation */
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
