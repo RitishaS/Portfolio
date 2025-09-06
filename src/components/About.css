@@ -1,13 +1,15 @@
-.about-section {
+
+ .about-section {
   width: 100vw;
-  background-color: #050505;
-  color: #cccccc;
-padding: 3rem 2rem 6rem 2rem;         /* reasonable padding */
+  background-color: #1c1c1c;
+  color: #cdb4db;
+  padding: 3rem 1rem 6rem 1rem; /* Adjust padding for smaller screens */
   display: flex;
+  flex-direction: column; /* Stack content vertically on mobile */
   justify-content: center;
   position: relative;
   scroll-margin-top: 100px;
- min-height: 75vh;       /* fill screen height naturally */
+  min-height: 75vh;
 }
 
 .about-content {
@@ -18,25 +20,53 @@ padding: 3rem 2rem 6rem 2rem;         /* reasonable padding */
 }
 
 .about-heading {
-  font-size: 4rem;
+  font-size: 2.5rem; /* Decrease font size for mobile */
   font-weight: bold;
   text-transform: uppercase;
   letter-spacing: 1px;
   margin-bottom: 1rem;
-  max-width: 600px;        /* fixed width for heading */
+  max-width: 100%; /* Allow heading to stretch */
 }
 
 .about-subheading {
-  font-size: 3rem;
+  font-size: 2rem; /* Decrease font size for mobile */
   color: #0ff;
-  max-width: 600px;        /* same fixed width */
+  max-width: 100%; /* Allow subheading to stretch */
 }
 
 .about-text {
-  font-size: 1.3rem;
+  font-size: 1rem; /* Decrease paragraph font size */
   line-height: 1.8;
   letter-spacing: 0.5px;
   color: #cccccc;
   text-align: left;
-  max-width: 100%;         /* paragraph stretches fully */
+  max-width: 100%;
+  margin-top: 1.5rem; /* Add some space above the text */
+}
+
+@media (min-width: 768px) {
+  .about-section {
+    padding: 3rem 2rem 6rem 2rem;
+    flex-direction: row; /* Revert to horizontal layout on larger screens */
+  }
+
+  .about-content {
+    margin-left: 6rem; /* Re-introduce the left margin */
+    text-align: left; /* Revert to left alignment */
+    max-width: 1400px;
+  }
+
+  .about-heading {
+    font-size: 4rem; /* Revert to larger font size */
+    max-width: 600px; /* Re-introduce the fixed width */
+  }
+
+  .about-subheading {
+    font-size: 3rem; /* Revert to larger font size */
+    max-width: 600px; /* Re-introduce the fixed width */
+  }
+
+  .about-text {
+    font-size: 1.3rem; /* Revert to larger font size */
+  }
 }

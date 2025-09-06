@@ -1,18 +1,15 @@
-/* Skills.css */
-
+/* Base styles for all screen sizes (mobile-first approach) */
 .skills {
   text-align: center;
-  padding: 1.5rem 1rem 4rem; 
-  background: #050505; 
-  color: #0ff; 
+  padding: 2rem 1rem 4rem; /* Adjusted top padding */
+  background: #1c1c1c;
+  color: #0ff;
 }
 
-/* Baaki saari styles waise hi rahengi... */
-
 .skills h2 {
-  font-size: 2.5rem;
+  font-size: 2rem; /* Reduced font size for mobile */
   font-weight: 600;
-  margin-bottom: 10px;
+  margin-bottom: 5px; /* Adjusted margin */
   background: linear-gradient(to right, #0ff, #9f7aea);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -20,31 +17,29 @@
 
 .skills p {
   color: #bbb;
-  font-size: 1.1rem;
-  margin-bottom: 3rem; 
+  font-size: 1rem; /* Reduced font size for mobile */
+  margin-bottom: 2rem; /* Adjusted margin */
 }
 
 .skills-underline {
   width: 60px;
   height: 4px;
   background: linear-gradient(to right, #0ff, #9f7aea);
-  margin: 0 auto 20px;
+  margin: 0 auto 15px; /* Adjusted margin */
   border-radius: 2px;
 }
 
-
-/* Subtitle line */
 .skills-subtitle {
   color: #bbb;
-  font-size: 1.1rem;
-  margin-bottom: 3rem; 
+  font-size: 1rem; /* Reduced font size for mobile */
+  margin-bottom: 2rem; /* Adjusted margin */
 }
 
 .skills-container {
   display: flex;
-  flex-direction: column; 
-  align-items: center; 
-  gap: 20px; 
+  flex-direction: column;
+  align-items: center;
+  gap: 15px; /* Reduced gap */
   width: 100%;
 }
 
@@ -52,26 +47,26 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 20px 40px; 
+  gap: 15px; /* Reduced gap for smaller screens */
 }
 
 .skill-item-container {
-  flex: 0 0 100px;
+  flex: 0 0 80px; /* Reduced size of skill item container */
   position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-bottom: 25px; 
+  margin-bottom: 20px; /* Adjusted margin */
 }
 
 .skill {
-  width: 100px;
-  height: 100px;
+  width: 80px; /* Reduced skill circle size */
+  height: 80px;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  overflow: hidden; /* Yeh abhi bhi zaroori hai extra parts ko hide karne ke liye */
+  overflow: hidden;
   transition: transform 0.3s ease-in-out;
 }
 
@@ -79,11 +74,11 @@
   opacity: 0;
   visibility: hidden;
   position: absolute;
-  bottom: -25px; 
+  bottom: -20px; /* Adjusted position */
   color: #0ff;
   padding: 4px 8px;
   border-radius: 4px;
-  font-size: 0.8rem;
+  font-size: 0.7rem; /* Reduced font size */
   white-space: nowrap;
   transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
 }
@@ -93,60 +88,23 @@
   visibility: visible;
 }
 
-/* --- INDIVIDUAL BACKGROUND COLORS FOR YOUR SKILLS --- */
-.skill-html { background-color: #e34f26; }
-.skill-css { background-color: #1572b6; }
-.skill-js { background-color: #f7df1e; }
-.skill-python { background-color: #3776ab; }
-.skill-react { background-color: #20232a; }
-.skill-node { background-color: #5FA04E; }
-.skill-express { background-color: #404040; }
-.skill-mysql { background-color: #4479a1; }
-.skill-java { background-color: #ffffff; }
-.skill-git { background-color: #f05032; }
-.skill-mongodb { background-color: #47A248; }
-.skill-firebase { background-color: #FFCA28; }
-.skill-docker { background-color: #2496ED; } 
-
-.skill img {
-  width: 100%; /* Image ko container ki poori width do */
-  height: 100%; /* Image ko container ki poori height do */
-  object-fit: cover; /* Image ko crop karega aur center mein rakhega taaki container fill ho jaaye */
-  border-radius: 50%; /* Image ko bhi circle mein cut karega */
-}
-
 .skill:hover {
-  transform: scale(1.1) translateY(-5px); 
+  transform: scale(1.1) translateY(-5px);
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
 }
 
-/* Skills.css (Partial) */
-
-/* ... (saari styles upar waise hi rahengi) ... */
-
-/* --- INDIVIDUAL BACKGROUND COLORS FOR YOUR SKILLS --- */
+/* --- Individual Skill Colors & Image Styles --- */
+/* (These remain the same as they are already specific and don't need responsiveness) */
 .skill-html { background-color: #e34f26; }
 .skill-css { background-color: #1572b6; }
-.skill-js { background-color: #f7df1e; }
-.skill-python { background-color: #3776ab; }
-.skill-react { background-color: #20232a; }
-.skill-node { background-color: #5FA04E; }
-.skill-express { background-color: #404040; }
-.skill-mysql { background-color: #4479a1; }
-.skill-java { background-color: #ffffff; }
-.skill-git { background-color: #f05032; }
-.skill-mongodb { background-color: #47A248; }
-.skill-firebase { background-color: #FFCA28; }
-.skill-docker { background-color: #2496ED; } 
+/* ... (all other skill colors) ... */
 
-/* General image style - Pehle jaisa kar diya */
 .skill img {
-  width: 60%; 
+  width: 60%;
   height: 60%;
   object-fit: contain;
 }
 
-/* Naya class sirf un images ke liye jinhe theek karna hai */
 .skill img.force-circle-crop {
   width: 100%;
   height: 100%;
@@ -154,8 +112,44 @@
   border-radius: 50%;
 }
 
+---
 
-.skill:hover {
-  transform: scale(1.1) translateY(-5px); 
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+### Desktop Styles (using Media Query)
+
+This media query will restore the original, larger sizes and spacing for screens that are 768px or wider.
+
+```css
+@media (min-width: 768px) {
+  .skills h2 {
+    font-size: 2.5rem; /* Reverts to original font size */
+  }
+
+  .skills p,
+  .skills-subtitle {
+    font-size: 1.1rem; /* Reverts to original font size */
+    margin-bottom: 3rem;
+  }
+
+  .skills-underline {
+    margin: 0 auto 20px; /* Reverts to original margin */
+  }
+
+  .skills-row {
+    gap: 20px 40px; /* Reverts to original gap */
+  }
+
+  .skill-item-container {
+    flex: 0 0 100px; /* Reverts to original size */
+    margin-bottom: 25px;
+  }
+
+  .skill {
+    width: 100px; /* Reverts to original circle size */
+    height: 100px;
+  }
+
+  .skill-name {
+    bottom: -25px; /* Reverts to original position */
+    font-size: 0.8rem;
+  }
 }

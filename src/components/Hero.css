@@ -1,51 +1,53 @@
+/* Base styles for all screen sizes (mobile-first approach) */
 .hero-section {
   width: 100%;
-  background-color: #050505; /* Replace with your preferred color */
-  padding: 6rem 2rem;
+  padding: 4rem 1rem; /* Adjusted padding for mobile */
   scroll-margin-top: 80px;
+  background: linear-gradient(-45deg, #0f0c29, #302b63, #24243e, #9f7aea);
+  background-size: 400% 400%;
+  animation: gradientMove 15s ease infinite;
 }
-
-
 
 .hero-content {
   display: flex;
+  flex-direction: column; /* Stacks content vertically on smaller screens */
   align-items: center;
-  justify-content: space-between;
-  flex-wrap: wrap;
+  justify-content: center; /* Centers content */
   max-width: 1400px;
   margin: 0 auto;
+  text-align: center; /* Center-align text */
 }
 
 .hero-text {
   flex: 1;
-  min-width: 300px;
-  max-width: 600px;
-  text-align: left;
+  width: 100%; /* Allows text to take full width */
+  max-width: none; /* Removes max-width constraint on mobile */
+  text-align: center; /* Ensures text is centered */
 }
 
 .hero-title {
-  font-size: 4.2rem;
+  font-size: 2.5rem; /* Smaller font for mobile */
   margin: 0.5rem 0;
 }
 
 .hero-role {
-  font-size: 3rem;
+  font-size: 1.8rem; /* Smaller font for mobile */
   font-weight: 500;
   color: #9ae3f9;
 }
 
 .hero-desc {
-  margin-top: 2rem;
-  font-size: 1.5rem;
+  margin-top: 1.5rem; /* Reduced margin */
+  font-size: 1rem; /* Smaller font for mobile */
   color: #6b818c;
-  line-height: 1.8;
-  text-align: left;
+  line-height: 1.6;
+  text-align: center; /* Ensures text is centered */
 }
 
 .hero-subtitle {
-  font-size: 1.5rem;
+  font-size: 1rem; /* Smaller font for mobile */
   color: #59544b;
-  letter-spacing: 2px;
+  letter-spacing: 1px; /* Reduced letter-spacing */
   text-transform: uppercase;
 }
 
@@ -53,65 +55,21 @@
   background: linear-gradient(to right, #0ff, #9f7aea);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  font-size: 4.5rem;
-}
-
-.icon {
-  font-size: 24px;
-}
-
-.icon-wrapper {
-  width: 45px;
-  height: 45px;
-  padding: 1rem;
+  font-size: 2.8rem; /* Smaller font for mobile */
 }
 
 .hero-image {
   flex: 1;
-  min-width: 300px;
-  max-width: 500px;
+  min-width: 250px;
+  max-width: 350px; /* Reduced max-width for image on mobile */
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 1rem;
-}
-.cursor {
-  color: #0ff;
-  font-weight: bold;
-  animation: blink 1s infinite;
+  margin-top: 2rem; /* Added space between text and image */
 }
 
-@media (max-width: 768px) {
-  .hero-content {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .hero-text,
-  .hero-desc {
-    text-align: center;
-  }
-
-  .hero-image {
-    justify-content: center;
-  }
-}
-
-.highlighted-word {
-  color: #006daa;
-}
-
-.hero-section {
-  width: 100%;
-  padding: 6rem 2rem;
-  scroll-margin-top: 80px;
-
-  /* Gradient background animation */
-  background: linear-gradient(-45deg, #0f0c29, #302b63, #24243e, #9f7aea);
-  background-size: 400% 400%;
-  animation: gradientMove 15s ease infinite;
-}
-
+/* Keyframe animation remains the same */
 @keyframes gradientMove {
   0% {
     background-position: 0% 50%;
@@ -121,5 +79,66 @@
   }
   100% {
     background-position: 0% 50%;
+  }
+}
+
+.cursor {
+  color: #0ff;
+  font-weight: bold;
+  animation: blink 1s infinite;
+}
+
+.highlighted-word {
+  color: #006daa;
+}
+
+---
+
+### Desktop Styles (with Media Query)
+
+```css
+@media (min-width: 768px) {
+  .hero-section {
+    padding: 6rem 2rem; /* Revert to original padding */
+  }
+
+  .hero-content {
+    flex-direction: row; /* Reverts to horizontal layout */
+    justify-content: space-between;
+  }
+
+  .hero-text,
+  .hero-desc {
+    text-align: left; /* Reverts to left alignment */
+  }
+
+  .hero-text {
+    max-width: 600px; /* Reverts to original max-width */
+  }
+
+  .hero-title {
+    font-size: 4.2rem; /* Reverts to original font size */
+  }
+
+  .hero-role {
+    font-size: 3rem; /* Reverts to original font size */
+  }
+
+  .hero-desc {
+    font-size: 1.5rem; /* Reverts to original font size */
+  }
+
+  .hero-subtitle {
+    font-size: 1.5rem; /* Reverts to original font size */
+    letter-spacing: 2px;
+  }
+
+  .gradient-name {
+    font-size: 4.5rem; /* Reverts to original font size */
+  }
+
+  .hero-image {
+    min-width: 300px;
+    max-width: 500px; /* Reverts to original max-width */
   }
 }
